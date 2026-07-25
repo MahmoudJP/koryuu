@@ -4,7 +4,8 @@ Last reviewed: 2026-07-26
 
 ## State
 
-- Intended GitHub visibility: Public
+- GitHub repository: `MahmoudJP/koryuu`
+- Repository visibility: Public
 - Local Git branch: `main`
 - Framework: Next.js 16, React 19, Tailwind CSS 4
 - Deployment target: Cloudflare Pages

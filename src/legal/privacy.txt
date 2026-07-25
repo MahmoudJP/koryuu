@@ -1,0 +1,356 @@
+================================================================================
+KORYUU — PRIVACY POLICY
+================================================================================
+Version 1.0 (Koryuu-wide)
+Effective date / Last updated: 3 June 2026
+Applies to: all Koryuu applications, websites, and services.
+
+This Privacy Policy explains how Koryuu ("Koryuu", "we", "us", or "our") collects,
+uses, shares, and protects personal data in connection with its applications
+(each, an "App"), its websites (including koryuu.com), and its related cloud,
+authentication, update, and support services (together, the "Services"). Koryuu is
+a software business based in Japan, presently operated as a sole proprietorship,
+reachable at https://www.koryuu.com.
+
+This is a single policy that applies across all Koryuu Apps. Different Apps offer
+different features, so a given section below applies to you only to the extent the
+App you use actually provides that feature (for example, a user account, cloud
+sync, or AI features). Where an individual App needs to disclose something
+specific, it will do so in that App or in an App-specific supplement that adds to,
+and is read together with, this Policy.
+
+For the purposes of data-protection laws, Koryuu is the controller of the personal
+data described in this Policy, except for (a) data you choose to send to a
+third-party AI provider through any optional AI features, and (b) content you
+choose to process, for which you are the controller and we (and the relevant
+providers) act on your instructions. See Sections 5 and 6.
+
+This Policy forms part of, and should be read together with, the Koryuu End User
+License Agreement and Terms of Use (the "Terms").
+
+--------------------------------------------------------------------------------
+1. SUMMARY (PLEASE ALSO READ THE FULL POLICY)
+--------------------------------------------------------------------------------
+• Some Koryuu Apps work entirely on your device and require no account. Others
+  require an account and use the cloud. The relevant sections apply per App.
+• Where an App requires an account, sign-in is provided by Google Firebase
+  Authentication; we collect your email address, a username, and (through
+  Firebase) manage your password.
+• Where an App offers cloud sync, some of the data you create in it (such as
+  contacts, snippets, templates, project records, assistant configuration, lists,
+  time records, and settings) is stored in the cloud using Google Firebase /
+  Google Cloud (Firestore), linked to your account, so it is available when you
+  sign in.
+• For Apps with accounts, we record limited usage and session information (for
+  example, app version, feature-usage counts, sign-in times, and your device name)
+  to operate, secure, and improve the Services.
+• Any AI features are optional and use "bring your own key" (BYOK). When you use
+  them, the text and any files or images you submit are sent to the AI provider
+  you choose. Your API keys are stored only on your device, in the operating
+  system's secure credential store, and are never sent to us.
+• The documents and files you process with an App are handled on your device and
+  are not uploaded to us, except where you explicitly use a feature that sends data
+  to a third party (the AI features) or attach a file to a bug report.
+• You are responsible for the content you process and for ensuring you may store
+  it in the cloud or send it to an AI provider.
+
+--------------------------------------------------------------------------------
+2. SCOPE
+--------------------------------------------------------------------------------
+This Policy applies to personal data processed through Koryuu Apps (across
+desktop, web, and mobile platforms, as applicable to each App), our websites, and
+the related cloud, authentication, update, and support services we operate. It
+does not apply to third-party services you choose to use (such as AI providers),
+which are governed by their own privacy policies, or to websites or services not
+operated by us. Features described below apply only to the Apps that include them.
+
+--------------------------------------------------------------------------------
+3. DATA THAT STAYS ON YOUR DEVICE
+--------------------------------------------------------------------------------
+For Apps that run on your device, the following data is, by design, kept locally
+and is not transmitted to us:
+
+(a) API keys. API keys you enter for AI providers are stored in the operating
+    system's secure credential store — the Windows Credential Manager, the macOS
+    Keychain, or the platform-equivalent secure store. They are never written to a
+    plain-text file, never included in backups we receive, and never transmitted to
+    us. They are sent only from your device, directly to the AI provider you
+    select, to authenticate your requests.
+
+(b) The files and documents you work on. When you use an App to compare, convert,
+    compress, inspect, render, or otherwise process files, that processing happens
+    locally on your device. The contents of those files are not uploaded to us. (If
+    you choose to use an AI feature on a file, or attach a file to a bug report, see
+    Sections 5 and 6.)
+
+(c) Local application data and cache. Application preferences, temporary files,
+    rendered previews, and certain working data may be stored locally on your
+    device. You can usually export or clear an App's data from within the App.
+
+--------------------------------------------------------------------------------
+4. ACCOUNT, CLOUD, AND DIAGNOSTIC DATA WE PROCESS
+--------------------------------------------------------------------------------
+For Apps that provide accounts and cloud features, and to deliver a reliable
+service, we process the following categories of data, primarily using Google
+Firebase / Google Cloud:
+
+(a) Account and authentication data. When you register and sign in, we process
+    your email address, a username you choose, your email-verification status, and
+    authentication tokens. Your password is collected and managed by Google
+    Firebase Authentication; we do not see or store your plain-text password.
+
+(b) Cloud-stored application content. When you use account-linked features, data
+    you create in the App is stored in the cloud (Google Firestore), associated
+    with your account identifier, so it is available across sessions. Depending on
+    the App, this can include: contacts, text snippets, templates, lists, project
+    records, time records, assistant configuration (such as the selected provider
+    and model — but not your API key), saved prompts, and app settings. Do not put
+    information in these features that you are not permitted to store with a cloud
+    provider.
+
+(c) Usage and session data. We record limited diagnostic and usage information to
+    operate, secure, and improve the Services, including: the application version
+    you run, sign-in timestamps and session records, counts and timestamps of
+    which features are used, your account email and identifier, and a device name
+    (your computer's hostname, used to recognize the device associated with a
+    session). This information is not used to access the contents of your files.
+
+(d) Support and crash data. If you submit a bug report or a crash report, we
+    process the information you provide, which may include a description, technical
+    diagnostics, your account identifier, and any file or screenshot you choose to
+    attach. Attach files to a bug report only if you are permitted to share them.
+
+(e) Update and licensing data. To deliver updates and enforce minimum-version and
+    licensing requirements, we process the application version and an account or
+    session identifier. Update files are distributed through a code-hosting /
+    distribution service.
+
+(f) Purchase and billing data (paid Apps and subscriptions). Koryuu Apps are
+    currently free; if in the future you buy a paid App, feature, or subscription,
+    the payment itself is handled by a third-party payment provider or by an app
+    store / platform. We do not collect or store your full payment-card number. We
+    may receive limited transaction data — such as a payment confirmation, the
+    amount and currency, billing country, and your subscription status — to provide
+    the purchase, manage renewals and cancellations, handle refunds, and meet our
+    tax and accounting obligations.
+
+We do not include the contents of the files you process in usage, diagnostic, or
+telemetry data.
+
+--------------------------------------------------------------------------------
+5. AI FEATURES AND "BRING YOUR OWN KEY" (BYOK)
+--------------------------------------------------------------------------------
+Where a Koryuu App provides AI features, they are optional and operate only after
+you enable them, choose a provider, add your own API key, and accept the in-app AI
+consent notice.
+
+(a) What is sent. When you use an AI feature, the content you submit — the text
+    you type and any files, documents, or images you attach or scan — is
+    transmitted over the internet to the AI provider you select (for example,
+    Google Gemini, OpenAI, or Anthropic Claude), so that the provider can generate
+    a response.
+
+(b) We are not in the middle. We do not operate AI servers. We do not receive,
+    store, or retain the content of your AI requests or the AI responses on our
+    servers. The request goes from your device to the provider you chose.
+
+(c) Your API key. Your API key is stored only on your device (Section 3(a)) and is
+    sent only to the provider it belongs to. We never receive it.
+
+(d) Provider terms govern. Each AI provider processes your submitted content under
+    its own terms and privacy policy, which may include retention for abuse
+    monitoring or other purposes. You are responsible for reviewing and complying
+    with those terms and for deciding what content is appropriate to send. Do not
+    send confidential, regulated, or client-restricted material unless your
+    agreements and the provider's terms allow it.
+
+(e) You control the controller relationship. Because you choose the provider and
+    supply the key, you act as the controller of the content you submit to the AI
+    provider, and the provider acts as your processor or independent controller
+    under its own terms.
+
+--------------------------------------------------------------------------------
+6. CONTENT YOU PROCESS — YOUR RESPONSIBILITY
+--------------------------------------------------------------------------------
+You decide what files, documents, images, and information to process with a Koryuu
+App, to store using cloud features, to send to AI providers, or to attach to
+support requests. You are responsible for ensuring that you have the necessary
+rights and permissions to do so, and that doing so complies with your obligations
+to clients and third parties and with applicable law (including confidentiality
+and data-protection obligations). Where the content you process contains other
+people's personal data, you are the controller of that data and we process it only
+on your instructions to provide the Services.
+
+--------------------------------------------------------------------------------
+7. HOW WE USE PERSONAL DATA
+--------------------------------------------------------------------------------
+We use personal data to:
+  • create and manage your account and authenticate sign-in;
+  • provide cloud storage and synchronization of your account-linked data;
+  • operate, maintain, secure, and troubleshoot the Services;
+  • deliver updates and enforce version, licensing, and security requirements;
+  • understand which features are used so we can prioritize improvements;
+  • respond to your support requests and diagnose crashes and bugs;
+  • detect, prevent, and address fraud, abuse, security incidents, and violations
+    of the Terms; and
+  • comply with legal obligations and enforce our agreements.
+
+We do not sell your personal data, and we do not use the contents of your files to
+build advertising profiles.
+
+--------------------------------------------------------------------------------
+8. LEGAL BASES (EEA / UK)
+--------------------------------------------------------------------------------
+Where the EU or UK General Data Protection Regulation applies, we rely on the
+following legal bases:
+  • Performance of a contract — to provide the Services, your account, cloud sync,
+    updates, and support (Article 6(1)(b)).
+  • Legitimate interests — to secure and improve the Services, understand feature
+    usage, and prevent abuse, balanced against your rights (Article 6(1)(f)).
+  • Consent — for any optional AI features and any optional diagnostics that ask
+    for your consent; you may withdraw consent at any time (Article 6(1)(a)).
+  • Legal obligation — to comply with applicable law (Article 6(1)(c)).
+Where we rely on consent, withdrawing it does not affect processing carried out
+before withdrawal.
+
+--------------------------------------------------------------------------------
+9. THIRD-PARTY PROVIDERS AND SUB-PROCESSORS
+--------------------------------------------------------------------------------
+We share personal data with the following categories of service providers, only as
+needed to provide the Services:
+
+  • Google LLC / Google Cloud (Firebase Authentication, Cloud Firestore, Firebase
+    Storage) — account authentication, cloud storage of account-linked data, and
+    analytics/session records.
+  • AI providers you select (for example, Google Gemini, OpenAI, Anthropic) — only
+    the content you choose to submit through any AI features, sent directly from
+    your device using your own API key. These are services you choose; their use
+    is governed by their own terms and privacy policies.
+  • A code-hosting / software-distribution service — to host and deliver
+    application updates and installers.
+  • A payment provider and/or app store or platform (only where you purchase a paid
+    App or subscription) — to process payments and manage subscriptions, renewals,
+    and refunds. Your full payment-card details are handled by that provider under
+    its own terms, not by us.
+
+These providers are authorized to process personal data only to provide their
+services to us (or, for AI providers, to you), and not for their own unrelated
+purposes, except as described in their own policies. We do not otherwise sell or
+rent personal data. We may also disclose personal data if required by law, to
+respond to lawful requests, to enforce our agreements, or to protect the rights,
+safety, and security of users, the public, or Koryuu, and in connection with a
+merger, acquisition, or sale of assets (including transfer of the business to a
+company later formed to operate it), subject to this Policy.
+
+--------------------------------------------------------------------------------
+10. INTERNATIONAL DATA TRANSFERS
+--------------------------------------------------------------------------------
+We are based in Japan, and our providers (including Google) may process and store
+data on servers located in countries other than your own, including the United
+States and other jurisdictions. Where personal data is transferred internationally,
+we and our providers rely on appropriate safeguards recognized under applicable
+law, such as the European Commission's Standard Contractual Clauses (and the UK
+addendum) or an adequacy decision, and, in the case of any AI features, your
+instruction to send the content to the provider you selected. By using the
+Services, you understand that your data may be processed in these locations.
+
+--------------------------------------------------------------------------------
+11. DATA RETENTION
+--------------------------------------------------------------------------------
+We retain personal data for as long as your account is active and as needed to
+provide the Services, and thereafter only as necessary to comply with our legal
+obligations, resolve disputes, prevent abuse, and enforce our agreements.
+  • Account and cloud-stored content is retained until you delete it in the App or
+    request deletion of your account, subject to short residual periods in backups
+    and logs.
+  • Session, usage, and diagnostic records are retained for a limited period
+    appropriate to security and product-improvement purposes and then deleted or
+    aggregated.
+  • Support and crash reports are retained for as long as needed to resolve the
+    matter and for a reasonable period afterward.
+  • API keys are not retained by us, because we never receive them; they remain on
+    your device until you remove them.
+When personal data is no longer needed, we delete it or irreversibly anonymize it.
+
+--------------------------------------------------------------------------------
+12. SECURITY
+--------------------------------------------------------------------------------
+We take reasonable technical and organizational measures designed to protect
+personal data, including:
+  • encryption of data in transit using HTTPS/TLS for all network communication
+    with our cloud providers and (via your key) with AI providers;
+  • storage of account-linked data with Google Firebase / Google Cloud, which
+    encrypts data at rest;
+  • storage of API keys in the operating-system secure credential store rather than
+    in plain-text files;
+  • access controls and authentication on cloud data, scoped to your account; and
+  • collecting only the data we need ("data minimization").
+No method of transmission or storage is completely secure, and we cannot guarantee
+absolute security. You are responsible for protecting your account credentials and
+your device. If we become aware of a personal-data breach that legally requires
+notification, we will notify affected users and the relevant authorities as
+required by applicable law.
+
+--------------------------------------------------------------------------------
+13. YOUR RIGHTS AND CHOICES
+--------------------------------------------------------------------------------
+Depending on where you live, you may have rights regarding your personal data,
+including the rights to access, correct, delete, restrict, or object to certain
+processing, to data portability, and to withdraw consent. These may arise under
+laws such as the EU/UK GDPR, the Japanese Act on the Protection of Personal
+Information (個人情報保護法 / APPI), and the California Consumer Privacy Act (CCPA/
+CPRA), among others.
+
+In Koryuu Apps that provide accounts, you can typically:
+  • view, edit, and delete much of your account-linked data directly;
+  • export your data from the App's settings, where that option is offered;
+  • delete your account and its associated cloud data from the App's settings; and
+  • turn any AI features on or off and add or remove API keys.
+
+To exercise other rights, or to request access to or deletion of your account and
+associated data, contact us at privacy@koryuu.com. We will respond within the time
+required by applicable law and may need to verify your identity. We do not sell or
+"share" personal data for cross-context behavioral advertising as those terms are
+defined under California law. You also have the right to lodge a complaint with
+your local data-protection authority (in Japan, the Personal Information Protection
+Commission).
+
+--------------------------------------------------------------------------------
+14. CHILDREN
+--------------------------------------------------------------------------------
+Koryuu Apps are intended for general, business, and professional use and are not
+directed to children. We do not knowingly collect personal data from children
+under 16. If you believe a child has provided us with personal data, contact us and
+we will delete it.
+
+--------------------------------------------------------------------------------
+15. AUTOMATED DECISION-MAKING
+--------------------------------------------------------------------------------
+We do not use your personal data to make decisions producing legal or similarly
+significant effects about you through solely automated means. Any AI features
+generate suggestions and output at your request; those outputs are for your
+assistance only and are not decisions made by us about you.
+
+--------------------------------------------------------------------------------
+16. CHANGES TO THIS POLICY
+--------------------------------------------------------------------------------
+We may update this Policy from time to time to reflect changes in our Apps, our
+providers, or legal requirements. When we make a material change, we will update
+the "Last updated" date and make the revised Policy available (for example, in an
+App's settings, on installation of a new version, or at koryuu.com). Your continued
+use of the Services after the revised Policy takes effect constitutes your
+acknowledgment of it.
+
+--------------------------------------------------------------------------------
+17. CONTACT US
+--------------------------------------------------------------------------------
+Controller:       Koryuu (a software business based in Japan)
+Website:          https://www.koryuu.com
+Privacy matters:  privacy@koryuu.com
+General/support:  support@koryuu.com
+
+The controller's representative name, business address, and other particulars
+required by applicable law are provided promptly, without charge, on request sent
+to the address above. For privacy questions, requests, or complaints, please
+contact privacy@koryuu.com.
+================================================================================

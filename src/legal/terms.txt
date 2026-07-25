@@ -1,0 +1,554 @@
+================================================================================
+KORYUU — END USER LICENSE AGREEMENT AND TERMS OF USE
+================================================================================
+Version 1.0 (Koryuu-wide)
+Effective date / Last updated: 3 June 2026
+Applies to: all Koryuu applications and services.
+
+IMPORTANT — READ THIS AGREEMENT CAREFULLY BEFORE INSTALLING OR USING ANY KORYUU
+SOFTWARE.
+
+This End User License Agreement and Terms of Use (this "Agreement") is a binding
+legal agreement between you ("you", "your", or "Licensee") and Koryuu, the
+publisher and developer of the Koryuu applications (referred to as "Koryuu", "we",
+"us", or "our"). Koryuu is a software business based in Japan, presently operated
+as a sole proprietorship and reachable through the website https://www.koryuu.com.
+References to "we", "us", and "our" include any successor entity to which the
+Koryuu business (or the relevant application) is transferred, including any company
+later formed to operate it (see Section 21, Assignment).
+
+This is a single agreement that applies to every Koryuu application (each, an
+"App", and together with their installers, updates, components, embedded runtimes,
+bundled data files, websites, and accompanying documentation, the "Software").
+Different Apps offer different features; a provision below applies to you only to
+the extent the App you use actually provides that feature (for example, accounts,
+cloud features, or AI features). Where an individual App has additional or
+different terms, they will be presented with that App and read together with this
+Agreement; in the event of a direct conflict for that App, the App-specific terms
+control for that App only.
+
+BY DOWNLOADING, INSTALLING, COPYING, ACCESSING, OR USING THE SOFTWARE, OR BY
+CLICKING "I AGREE" OR A SIMILAR BUTTON, YOU ACKNOWLEDGE THAT YOU HAVE READ,
+UNDERSTOOD, AND AGREE TO BE BOUND BY THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT
+DOWNLOAD, INSTALL, OR USE THE SOFTWARE, AND DELETE ANY COPIES IN YOUR POSSESSION.
+
+If you are entering into this Agreement on behalf of a company or other legal
+entity, you represent that you have the authority to bind that entity, and "you"
+refers to that entity.
+
+--------------------------------------------------------------------------------
+1. DEFINITIONS
+--------------------------------------------------------------------------------
+"AI Features" — any optional, AI-assisted functions of an App (including in-app
+   assistants, AI scanning, and AI text functions) that transmit your content to a
+   third-party artificial-intelligence provider you select.
+"AI Provider" — a third-party provider of AI services that you choose to use
+   through the AI Features (for example, Google Gemini, OpenAI, or Anthropic
+   Claude).
+"API Key" — a credential you obtain directly from an AI Provider that authorizes
+   use of that provider's service.
+"Account" — the user account you create to sign in to an App, where an App requires
+   one.
+"Your Content" — any files, text, images, data, or other material you open,
+   import, attach, scan, generate with, or submit through the Software.
+"Documentation" — the user-facing instructions, in-app help, and notices we
+   provide for the Software.
+
+--------------------------------------------------------------------------------
+2. LICENSE GRANT
+--------------------------------------------------------------------------------
+2.1 Grant. Subject to your continuous compliance with this Agreement and your
+payment of any applicable fees, we grant you a personal, limited, non-exclusive,
+non-transferable, non-sublicensable, revocable license to download, install, and
+use the Software in object-code form for your internal business or personal
+purposes, on devices that you own or control.
+
+2.2 Licensed, not sold. The Software is licensed, not sold. We and our licensors
+retain all right, title, and interest in and to the Software not expressly
+granted to you. No rights are granted by implication, estoppel, or otherwise.
+
+2.3 Updates. This Agreement governs all updates, upgrades, patches, and new
+versions of the Software that we may provide, unless a separate agreement
+accompanies a particular update, in which case that agreement governs that
+update.
+
+--------------------------------------------------------------------------------
+3. LICENSE RESTRICTIONS
+--------------------------------------------------------------------------------
+Except to the extent expressly permitted by this Agreement or by applicable law
+that cannot be excluded by agreement, you shall NOT, and shall not permit any
+third party to:
+  (a) copy, reproduce, distribute, publish, transmit, sell, resell, rent, lease,
+      lend, sublicense, assign, time-share, host, or otherwise make the Software
+      available to any third party, including as a service bureau or via any
+      "software-as-a-service" arrangement;
+  (b) reverse engineer, decompile, disassemble, decrypt, or otherwise attempt to
+      derive the source code, underlying ideas, algorithms, file formats, or
+      internal structure of the Software, except, and only to the extent, that
+      this restriction is expressly prohibited by applicable mandatory law;
+  (c) modify, translate, adapt, port, or create derivative works based on the
+      Software, or merge it into another program;
+  (d) remove, alter, obscure, or circumvent any copyright, trademark, or other
+      proprietary notices, license keys, authentication, update, version-check,
+      or other technical protection or security measures in the Software;
+  (e) use the Software to build, train, or improve a competing product or
+      service, or to copy any feature, function, or interface of the Software;
+  (f) use the Software in violation of any applicable law, regulation, or
+      third-party right, or for any unlawful, infringing, or harmful purpose;
+  (g) use the Software in any manner that could damage, disable, overburden, or
+      impair the Software or any associated systems, or interfere with any other
+      party's use of the Software; or
+  (h) access or use the Software in order to monitor its availability,
+      performance, or functionality for competitive purposes, or to benchmark it
+      for public disclosure without our prior written consent.
+
+--------------------------------------------------------------------------------
+4. ACCOUNTS AND REGISTRATION
+--------------------------------------------------------------------------------
+4.1 Account required. Certain Apps and features require you to create and sign in
+to an Account. Where required, Account sign-in and identity services are provided
+through Google Firebase Authentication. To register you provide an email address, a
+password, and a username, and you may be required to verify your email address.
+
+4.2 Your responsibilities. You agree to provide accurate and current registration
+information, to keep your credentials confidential, and to be responsible for all
+activity that occurs under your Account. You must promptly notify us of any
+unauthorized use of your Account. You may not share your Account or use another
+person's Account without authorization.
+
+4.3 Eligibility. You must be at least the age of majority in your jurisdiction,
+and at least 16 years old, to create an Account and use the Software. The Software
+is intended for general, business, and professional use and is not directed to
+children.
+
+4.4 Suspension. We may suspend, restrict, or terminate an Account that we
+reasonably believe has breached this Agreement, has been used unlawfully, or poses
+a security risk, as further described in Section 17.
+
+--------------------------------------------------------------------------------
+5. FEES, PAYMENT, AND REFUNDS
+--------------------------------------------------------------------------------
+5.1 Fees. The Software, or certain Apps, features, editions, or terms of it, may be
+offered free of charge or for a fee. Where a fee applies, it will be presented to
+you at the point of purchase, and your license is conditioned on payment of that
+fee. All fees are stated exclusive of taxes unless otherwise indicated, and you
+are responsible for all applicable taxes, levies, and duties (other than taxes on
+our net income).
+
+5.2 Third-party charges. Fees for the Software do not include amounts charged by
+AI Providers or other third parties. You are solely responsible for all charges
+incurred under your own accounts with those third parties (see Sections 7 and 8).
+
+5.3 Refunds. Except where a refund is required by applicable mandatory law (for
+example, certain consumer-protection rights described in Section 18), and except
+as we may state in a separate, published refund policy at the point of purchase,
+all fees are non-refundable. If a refund is required by law or granted by us, it
+will be made using the original payment method.
+
+5.4 Commercial-transaction disclosures (Japan). For sales subject to Japan's Act
+on Specified Commercial Transactions (特定商取引法), the seller's representative
+name, business address, telephone number, and other statutory particulars will be
+provided promptly, without charge, in response to a request sent to
+support@koryuu.com. Where required, those particulars and any specific pricing,
+payment-timing, and delivery terms are presented at or before the point of
+purchase and form part of this Agreement for that transaction.
+
+5.5 Subscriptions and renewals. Koryuu Apps are currently offered free of charge.
+We may in the future offer some Apps or features on a paid or subscription basis.
+Where an App or feature is offered on a subscription, the applicable price, billing
+period (for example, monthly or annual), and renewal terms are presented to you at
+the point of purchase. Unless stated otherwise at purchase, subscriptions are billed
+in advance and automatically renew for successive periods at the then-current price
+until you cancel. You may cancel at any time, effective at the end of the current
+billing period; cancellation stops future renewals but, except where required by
+applicable mandatory law or by a published refund policy, does not entitle you to a
+refund for the current period. We will give reasonable advance notice of any price
+change that would apply on renewal, and the new price takes effect from the next
+renewal. Any free trial converts to a paid subscription at the end of the trial
+unless you cancel before it ends. Subscriptions may be managed or cancelled through
+the app store, platform, or payment processor used for the purchase, or by
+contacting support@koryuu.com.
+
+--------------------------------------------------------------------------------
+6. INTELLECTUAL PROPERTY AND OWNERSHIP
+--------------------------------------------------------------------------------
+6.1 Our rights. The Software and all intellectual property rights in and to it,
+including all copyrights, trademarks, trade names, trade secrets, patents, design
+rights, know-how, and all copies and derivative works, are and shall remain the
+exclusive property of Koryuu and its licensors. The "Koryuu" name, the names of the
+individual Apps, and our logos and product identifiers are our trademarks and may
+not be used without our prior written permission, except to identify the Software
+truthfully.
+
+6.2 Reservation. All rights not expressly granted to you under this Agreement are
+reserved by us and our licensors.
+
+6.3 Open-source components. The Software includes third-party open-source
+components that are licensed to you under their own license terms. Those terms are
+set out in the THIRD-PARTY-NOTICES file distributed with the relevant App and, to
+the extent of any conflict regarding those components, prevail over this Agreement
+for those components only. Nothing in this Agreement limits any rights you may have
+under those open-source licenses.
+
+6.4 Your Content. As between you and us, you retain all rights in Your Content. We
+do not claim ownership of Your Content. You are solely responsible for Your Content
+and for ensuring you have all rights necessary to use it with the Software,
+including through any AI Features.
+
+--------------------------------------------------------------------------------
+7. AI FEATURES — "BRING YOUR OWN KEY" (BYOK)
+--------------------------------------------------------------------------------
+This Section applies to any App that provides AI Features.
+
+7.1 Optional. The AI Features are optional. They operate only when you enable
+them, select an AI Provider, supply your own API Key, and provide the consent
+prompted in the App before any content is sent.
+
+7.2 Bring your own key. The AI Features require an API Key that you obtain
+directly from your chosen AI Provider. You are solely responsible for obtaining
+and maintaining the API Key, for all fees and usage charged by the AI Provider,
+for your usage limits, and for complying with the AI Provider's terms of service,
+acceptable-use policies, and privacy policies.
+
+7.3 Transmission of content. When you use an AI Feature, the content you submit —
+including the text you type and any files, documents, or images you attach or
+scan — is transmitted to and processed by the AI Provider you select, over the
+internet, in order to generate a response. We do not operate our own AI inference
+servers, and we do not receive, store, or retain the content of your AI requests
+or the AI responses on our own servers.
+
+7.4 Key storage. Your API Keys are stored locally on your device in the operating
+system's secure credential store (for example, the Windows Credential Manager or
+the macOS Keychain). We do not collect, transmit, escrow, or store your API Keys.
+Your API Key is sent only from your device, directly to the AI Provider you select,
+to authenticate your own requests.
+
+7.5 No reliance on AI output. AI output is generated automatically by third-party
+systems, is probabilistic in nature, and may be inaccurate, incomplete,
+outdated, biased, or otherwise unsuitable. AI output is provided for assistance
+only and is NOT a guarantee of correctness, legal or regulatory compliance, or
+fitness for any purpose. You must independently review and verify all AI output
+before relying on it, and you are solely responsible for any use you make of it.
+
+7.6 Provider relationship. Your use of any AI Provider is a matter between you and
+that AI Provider. We are not a party to that relationship, do not control the AI
+Providers, and are not responsible for their services, availability, pricing,
+output, data practices, or acts or omissions.
+
+--------------------------------------------------------------------------------
+8. THIRD-PARTY SERVICES, CONTENT, AND TRADEMARKS
+--------------------------------------------------------------------------------
+8.1 Third-party services. The Software may rely on and interoperate with
+third-party services and platforms, including Google Firebase and Google Cloud
+(for Account authentication, cloud data storage, and analytics), AI Providers
+(for any AI Features), and code-hosting/distribution services used to deliver
+updates. Your use of those services may be subject to the third parties' own
+terms and privacy policies. We are not responsible for third-party services or for
+any third-party act, omission, outage, or change that affects the Software.
+
+8.2 Third-party files and formats. An App may open, convert, compare, or produce
+files associated with third-party formats and applications. You are responsible for
+holding any licenses required to use those formats, applications, fonts, or
+content.
+
+8.3 Trademarks. All third-party product and company names, logos, and brands
+referenced by the Software — including, where applicable, those of Google, OpenAI,
+Anthropic, Apple, and Microsoft — are the property of their respective owners and
+are used solely for accurate, nominative reference and to identify compatibility.
+The Koryuu Apps are independent products and are not affiliated with, endorsed,
+certified, or sponsored by any of those companies. App-specific trademark notices
+and required open-source attributions are provided in the THIRD-PARTY-NOTICES file
+distributed with each App.
+
+--------------------------------------------------------------------------------
+9. USER RESPONSIBILITIES AND ACCEPTABLE USE
+--------------------------------------------------------------------------------
+You are solely responsible for Your Content and for your use of the Software, and
+you agree that:
+  (a) you have all rights, consents, and permissions necessary to open, process,
+      transmit, and otherwise use Your Content with the Software, including
+      through any AI Features;
+  (b) you will not use the Software to create, store, or transmit material that is
+      unlawful, infringing, defamatory, or that violates the privacy or
+      intellectual-property rights of others;
+  (c) you will comply with all laws applicable to your use of the Software and to
+      Your Content, including data-protection, confidentiality, and export laws;
+  (d) you are responsible for maintaining your own backups of Your Content; the
+      Software is a tool, not a backup or archival service, and you should not
+      rely on it as your sole copy of any important data; and
+  (e) you will use the Software in accordance with the Documentation.
+
+--------------------------------------------------------------------------------
+10. CONFIDENTIAL INFORMATION — IMPORTANT WARNING
+--------------------------------------------------------------------------------
+Koryuu Apps may be used with client work, pre-release materials, and other
+sensitive documents. PLEASE READ THIS SECTION CAREFULLY.
+
+10.1 Any AI Features transmit the content you submit to a third-party AI Provider
+outside your device. DO NOT submit any confidential, proprietary, personal,
+regulated, embargoed, or client-restricted material to the AI Features unless (i)
+your agreements with the relevant client or third party permit such disclosure
+and processing, and (ii) the AI Provider's terms permit you to submit that
+material. You are solely responsible for determining whether any given material
+may be transmitted.
+
+10.2 When you enable Account and cloud features, certain data you enter into an App
+(such as contacts, snippets, templates, and project records) is stored in the
+cloud as described in our Privacy Policy. Do not enter information into those
+features that you are not permitted to store with a cloud provider.
+
+10.3 We are not responsible for any loss, disclosure, or misuse of confidential
+information that results from your decision to transmit it to an AI Provider or to
+store it using cloud features.
+
+--------------------------------------------------------------------------------
+11. DATA, PRIVACY, AND CLOUD STORAGE
+--------------------------------------------------------------------------------
+11.1 Privacy Policy. Our collection and use of personal data in connection with
+the Software is described in the Koryuu Privacy Policy (available at
+koryuu.com/legal/privacy and referenced within the Apps), which is incorporated
+into this Agreement by reference. By using the Software you acknowledge the Privacy
+Policy.
+
+11.2 Cloud storage. Where an App provides cloud features, it uses Google Firebase /
+Google Cloud to provide Account authentication and to store certain user data
+(such as contacts, snippets, templates, project records, assistant configuration,
+and settings) associated with your Account, and to record limited usage and session
+information. The categories of data, how they are used, the sub-processors
+involved, and your choices are described in the Privacy Policy.
+
+11.3 On-device data. Your API Keys and certain working data remain on your device
+as described in the Privacy Policy and in Section 7.4.
+
+--------------------------------------------------------------------------------
+12. AUTOMATIC UPDATES AND VERSION REQUIREMENTS
+--------------------------------------------------------------------------------
+The Software may check for, download, and install updates, and may require a
+minimum version to continue operating, in order to maintain security,
+compatibility, licensing, and correct functioning. By using the Software you
+consent to such automatic checks and updates. Limited, non-content data (such as
+the application version and an account or session identifier) may be processed to
+operate licensing and the update service, as described in the Privacy Policy. If
+you do not wish to receive updates, your remedy is to stop using the Software.
+
+--------------------------------------------------------------------------------
+13. EXPORT CONTROL AND SANCTIONS COMPLIANCE
+--------------------------------------------------------------------------------
+The Software, and your use of it, may be subject to export-control and economic-
+sanctions laws, including those of Japan, the United States, and other
+jurisdictions. You represent and warrant that (a) you are not located in, under
+the control of, or a national or resident of any country or region subject to a
+comprehensive embargo, and (b) you are not a person or entity identified on any
+applicable restricted-party or sanctions list. You agree not to export, re-export,
+or transfer the Software, or use it, in violation of any applicable export-control
+or sanctions law, and not to use the Software for any prohibited end use.
+
+--------------------------------------------------------------------------------
+14. DISCLAIMER OF WARRANTIES
+--------------------------------------------------------------------------------
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SOFTWARE AND ALL RELATED
+SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE", WITH ALL FAULTS AND WITHOUT
+WARRANTY OF ANY KIND. WE AND OUR LICENSORS AND SUPPLIERS EXPRESSLY DISCLAIM ALL
+WARRANTIES AND CONDITIONS, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE,
+INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OR CONDITIONS OF
+MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE,
+ACCURACY, QUIET ENJOYMENT, AND NON-INFRINGEMENT.
+
+WE DO NOT WARRANT THAT THE SOFTWARE WILL MEET YOUR REQUIREMENTS, THAT IT WILL BE
+UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE, THAT DEFECTS WILL BE CORRECTED, THAT
+IT WILL BE FREE OF HARMFUL COMPONENTS, OR THAT ANY DATA OR OUTPUT (INCLUDING AI
+OUTPUT) WILL BE ACCURATE, COMPLETE, OR RELIABLE. YOU ASSUME THE ENTIRE RISK
+ARISING OUT OF YOUR USE OF THE SOFTWARE AND OF ANY RELIANCE ON ITS OUTPUT.
+
+NO ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY US OR OUR REPRESENTATIVES SHALL
+CREATE ANY WARRANTY. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN
+WARRANTIES, SO SOME OF THE ABOVE EXCLUSIONS MAY NOT APPLY TO YOU; IN THAT CASE,
+SUCH WARRANTIES ARE LIMITED TO THE MINIMUM SCOPE AND DURATION PERMITTED BY LAW.
+
+--------------------------------------------------------------------------------
+15. LIMITATION OF LIABILITY
+--------------------------------------------------------------------------------
+15.1 Exclusion of indirect damages. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE
+LAW, IN NO EVENT WILL WE OR OUR LICENSORS OR SUPPLIERS BE LIABLE FOR ANY INDIRECT,
+INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY
+LOSS OF PROFITS, REVENUE, GOODWILL, BUSINESS, OR ANTICIPATED SAVINGS, OR FOR ANY
+LOSS, CORRUPTION, OR INACCURACY OF DATA, OR FOR ANY BUSINESS INTERRUPTION, ARISING
+OUT OF OR RELATED TO THE SOFTWARE, THE AI FEATURES, ANY THIRD-PARTY SERVICE, OR
+THIS AGREEMENT, HOWEVER CAUSED AND UNDER ANY THEORY OF LIABILITY (WHETHER IN
+CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY, OR OTHERWISE), EVEN IF WE HAVE BEEN
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGES AND EVEN IF A REMEDY FAILS OF ITS
+ESSENTIAL PURPOSE.
+
+15.2 Aggregate cap. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, OUR TOTAL
+AGGREGATE LIABILITY ARISING OUT OF OR RELATED TO A KORYUU APP AND THIS AGREEMENT
+WILL NOT EXCEED THE GREATER OF (a) THE TOTAL AMOUNT YOU ACTUALLY PAID US FOR THAT
+APP IN THE TWELVE (12) MONTHS IMMEDIATELY PRECEDING THE EVENT GIVING RISE TO THE
+LIABILITY, OR (b) FIVE THOUSAND JAPANESE YEN (¥5,000).
+
+15.3 Allocation of risk. The disclaimers and limitations in Sections 14 and 15
+reflect a reasonable allocation of risk and are a fundamental basis of the bargain
+between you and us, and they apply even if any limited remedy fails of its
+essential purpose.
+
+15.4 Mandatory-law exceptions. Nothing in this Agreement excludes or limits our
+liability for: (a) death or personal injury caused by our negligence; (b) fraud or
+fraudulent misrepresentation; (c) our willful misconduct or gross negligence; or
+(d) any other liability that cannot be excluded or limited under applicable
+mandatory law. To the extent applicable law (including the Japanese Consumer
+Contract Act, where you are a consumer) does not permit the full exclusion or
+limitation above, the exclusion or limitation applies only to the extent
+permitted, and our liability is limited to the minimum extent allowed by that law.
+See also Section 18.
+
+--------------------------------------------------------------------------------
+16. INDEMNIFICATION
+--------------------------------------------------------------------------------
+To the maximum extent permitted by applicable law, you agree to indemnify, defend,
+and hold harmless Koryuu and its successors, affiliates, and personnel from and
+against any third-party claims, demands, losses, liabilities, damages, costs, and
+expenses (including reasonable legal fees) arising out of or related to: (a) Your
+Content; (b) your use of the Software or the AI Features in breach of this
+Agreement or applicable law; (c) your violation of any third-party right,
+including any client confidentiality obligation; or (d) your breach of any AI
+Provider's or other third party's terms. This Section does not apply to the extent
+a claim arises from our own breach of this Agreement or our willful misconduct, or
+where such indemnity is not permitted by applicable mandatory law (including in
+respect of consumers).
+
+--------------------------------------------------------------------------------
+17. TERM AND TERMINATION
+--------------------------------------------------------------------------------
+17.1 Term. This Agreement is effective when you first install or use the Software
+and continues until terminated as set out below.
+
+17.2 Termination by you. You may terminate this Agreement at any time by ceasing
+all use of the Software and uninstalling and deleting all copies.
+
+17.3 Termination or suspension by us. We may suspend or terminate this Agreement
+or your Account, in whole or in part, immediately and without notice, if (a) you
+breach this Agreement, (b) we reasonably believe your use is unlawful or poses a
+security, legal, or reputational risk, or (c) we are required to do so by law. We
+may also discontinue any App, or any feature or third-party integration, in whole
+or in part, with reasonable notice where practicable.
+
+17.4 Effect of termination. On termination, the licenses granted to you end
+immediately and you must stop using and uninstall the Software and delete all
+copies. Termination does not entitle you to any refund except as required by law.
+
+17.5 Survival. Sections 1, 3, 5 (for amounts accrued), 6, 7.5, 7.6, 8, 9, 10, 13,
+14, 15, 16, 17.4, 17.5, 18, 20, 21, 22, 23, 24, and 25 survive termination.
+
+--------------------------------------------------------------------------------
+18. CONSUMER RIGHTS
+--------------------------------------------------------------------------------
+If you use the Software as a consumer, you may have statutory rights that cannot
+be excluded or limited by agreement, including under the Japanese Consumer
+Contract Act (消費者契約法) and, where applicable, the consumer-protection laws of
+your country of residence. Nothing in this Agreement limits or excludes any such
+mandatory consumer rights, and the disclaimers, limitations, and indemnities in
+this Agreement apply to you only to the extent permitted by those laws. Where a
+provision of this Agreement is found to be unenforceable against a consumer, it
+will be enforced only to the maximum extent permitted, and the remainder of this
+Agreement will continue in effect.
+
+--------------------------------------------------------------------------------
+19. FORCE MAJEURE
+--------------------------------------------------------------------------------
+We are not liable for any delay or failure to perform resulting from causes beyond
+our reasonable control, including acts of God, natural disasters, epidemics, war,
+terrorism, civil unrest, labor disputes, governmental action, failures or outages
+of the internet, telecommunications, hosting, cloud, or AI Provider services, or
+power or equipment failures.
+
+--------------------------------------------------------------------------------
+20. CHANGES TO THIS AGREEMENT
+--------------------------------------------------------------------------------
+We may update this Agreement from time to time to reflect changes in the Software,
+in third-party services, or in legal requirements. When we make a material change,
+we will update the "Last updated" date and make the revised Agreement available
+with the Software (for example, on installation of a new version, in an App's
+settings, or at koryuu.com). Your continued use of the Software after a revised
+Agreement takes effect constitutes your acceptance of it. If you do not agree to
+the revised Agreement, you must stop using the Software.
+
+--------------------------------------------------------------------------------
+21. ASSIGNMENT
+--------------------------------------------------------------------------------
+You may not assign or transfer this Agreement or any of your rights or obligations
+under it, in whole or in part, without our prior written consent; any attempted
+assignment in violation of this Section is void. We may assign or transfer this
+Agreement, in whole or in part, to an affiliate or to a successor in connection
+with a merger, acquisition, reorganization, or sale of assets, or to a company
+later formed to operate the Koryuu business. This Agreement binds and benefits the
+parties and their permitted successors and assigns.
+
+--------------------------------------------------------------------------------
+22. GOVERNING LAW AND DISPUTE RESOLUTION
+--------------------------------------------------------------------------------
+22.1 Governing law. This Agreement, and any dispute or claim arising out of or in
+connection with it or its subject matter (including non-contractual disputes), is
+governed by and construed in accordance with the laws of Japan, without regard to
+its conflict-of-laws rules and excluding the United Nations Convention on
+Contracts for the International Sale of Goods.
+
+22.2 Jurisdiction. Subject to Section 22.3, you and we irrevocably agree that the
+Tokyo District Court (東京地方裁判所) shall have exclusive jurisdiction as the
+court of first instance over any dispute arising out of or in connection with this
+Agreement.
+
+22.3 Consumer protection. If you are a consumer, nothing in Section 22 deprives
+you of the protection of mandatory provisions of the law of your country of
+residence, or of any right you may have to bring proceedings in, or to benefit
+from the courts of, your place of residence where such rights cannot be excluded
+by agreement.
+
+22.4 Injunctive relief. Notwithstanding the foregoing, we may seek injunctive or
+other equitable relief to protect our intellectual-property rights or
+confidential information in any court of competent jurisdiction.
+
+--------------------------------------------------------------------------------
+23. SEVERABILITY; NO WAIVER
+--------------------------------------------------------------------------------
+If any provision of this Agreement is held to be invalid, illegal, or
+unenforceable, that provision will be modified to the minimum extent necessary to
+make it enforceable, or, if it cannot be so modified, severed, and the remaining
+provisions will continue in full force and effect. Our failure to enforce any
+provision is not a waiver of our right to do so later, and any waiver must be in
+writing to be effective.
+
+--------------------------------------------------------------------------------
+24. ENTIRE AGREEMENT
+--------------------------------------------------------------------------------
+This Agreement, together with the Privacy Policy, the THIRD-PARTY-NOTICES file for
+the relevant App, any App-specific terms, and any order terms or purchase
+disclosures presented to you at the point of purchase, constitutes the entire
+agreement between you and us concerning the Software, and supersedes all prior or
+contemporaneous understandings, communications, and agreements, whether written or
+oral, regarding its subject matter. Any additional or different terms in any
+purchase order or other document issued by you are rejected and have no effect.
+
+--------------------------------------------------------------------------------
+25. LANGUAGE
+--------------------------------------------------------------------------------
+This Agreement is drafted in English. We may provide translations for convenience.
+In the event of any conflict or inconsistency between the English version and a
+translation, the English version prevails, except where applicable mandatory law
+(including consumer law in your jurisdiction) requires that a local-language
+version govern.
+
+--------------------------------------------------------------------------------
+26. CONTACT AND PUBLISHER DETAILS
+--------------------------------------------------------------------------------
+Publisher:        Koryuu (a software business based in Japan)
+Website:          https://www.koryuu.com
+General/legal:    support@koryuu.com
+Privacy matters:  privacy@koryuu.com
+
+The publisher's representative name, business address, telephone number, and other
+particulars required by applicable law (including Japan's Act on Specified
+Commercial Transactions) are provided promptly, without charge, on request sent to
+support@koryuu.com.
+
+By installing or using any Koryuu application, you acknowledge that you have read
+and understood this Agreement and agree to be bound by its terms.
+================================================================================

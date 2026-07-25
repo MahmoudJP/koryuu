@@ -1,0 +1,8 @@
+name = "koryuu"
+compatibility_date = "2025-05-01"
+pages_build_output_dir = "out"
+
+# This file tells wrangler how to deploy the static export.
+# Project name on Cloudflare Pages: koryuu
+# Build: `npm run build` (Next.js static export -> /out)
+# Deploy: `npm run deploy`

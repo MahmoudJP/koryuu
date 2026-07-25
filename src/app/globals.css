@@ -1,0 +1,698 @@
+@import "tailwindcss";
+
+/* Dark mode is driven by a data-theme attribute on <html>, set before paint
+   by the inline script in layout.tsx and toggled by the ThemeToggle. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ── Light theme (default) ─────────────────────────────────── */
+:root {
+  --background: #fbfbfd;
+  --surface: #ffffff;
+  --surface-2: #f4f4f7;
+  --foreground: #0b0b0f;
+  --muted: #62626d;
+  --border: #e8e8ee;
+  --border-strong: #d6d6df;
+  --accent: #5b5bd6;
+  --accent-hover: #4a4ac4;
+  --accent-fg: #ffffff;
+  --ring: rgba(91, 91, 214, 0.35);
+}
+
+/* ── Dark theme ────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --background: #08080b;
+  --surface: #121217;
+  --surface-2: #1a1a20;
+  --foreground: #f4f4f7;
+  --muted: #9a9aa6;
+  --border: #24242c;
+  --border-strong: #32323c;
+  --accent: #8b8bf5;
+  --accent-hover: #9d9dff;
+  --accent-fg: #0b0b0f;
+  --ring: rgba(139, 139, 245, 0.4);
+}
+
+/* Map the runtime CSS variables into Tailwind's theme so utilities like
+   bg-background, text-muted, border-border resolve correctly and react to
+   the active theme. */
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-fg: var(--accent-fg);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-display), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-jp: var(--font-jp), "Hiragino Sans", "Yu Gothic", sans-serif;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+  --radius-3xl: 1.75rem;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  font-feature-settings: "cv02", "cv03", "cv04", "ss01";
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+/* Ambient gradient that sits behind the page — subtle, theme-aware. */
+.bg-aurora {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(40rem 30rem at 12% -5%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%),
+    radial-gradient(36rem 28rem at 100% 8%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 65%);
+}
+
+/* Reusable display heading */
+.display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.jp {
+  font-family: var(--font-jp);
+}
+
+/* Fade / rise entrance, gated by .ready on <body> so it only plays once. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.reveal {
+  opacity: 0;
+}
+body.ready .reveal {
+  animation: rise 0.7s cubic-bezier(0.22, 0.68, 0.18, 1) both;
+}
+body.ready .reveal-2 {
+  animation-delay: 0.08s;
+}
+body.ready .reveal-3 {
+  animation-delay: 0.16s;
+}
+body.ready .reveal-4 {
+  animation-delay: 0.24s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+}
+
+/* Hide scrollbars on horizontal filter rails while staying scrollable. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   "Confluence" — the intro loading screen.
+   Many app-colored currents flow inward and merge into one core,
+   which resolves into the 交流 kanji and the Koryuu wordmark.
+   ───────────────────────────────────────────────────────────── */
+
+/* Lock scroll only while the loader is on screen. */
+html.kr-loading,
+html.kr-loading body {
+  overflow: hidden;
+}
+
+.kr-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  background: var(--background);
+  overflow: hidden;
+  opacity: 1;
+  transition:
+    opacity 0.7s cubic-bezier(0.5, 0, 0.2, 1),
+    filter 0.7s cubic-bezier(0.5, 0, 0.2, 1);
+}
+
+/* The curtain lift: fade the whole field while the mark floats up & out. */
+.kr-loader.is-exiting {
+  opacity: 0;
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+/* Ambient accent glow behind the confluence, brightening as it forms. */
+.kr-loader__glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    34rem 30rem at 50% 46%,
+    color-mix(in srgb, var(--accent) 16%, transparent),
+    transparent 68%
+  );
+  opacity: 0;
+  animation: kr-glow 2.6s cubic-bezier(0.22, 0.68, 0.18, 1) forwards;
+}
+
+@keyframes kr-glow {
+  0% { opacity: 0; }
+  45% { opacity: 0.35; }
+  70% { opacity: 1; }
+  100% { opacity: 0.85; }
+}
+
+.kr-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(86vw, 540px);
+  height: 340px;
+}
+
+/* The current field sits behind the mark and holds the flowing dots. */
+.kr-field {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+/* Each dot is one app, streaming from the ring into the core and dissolving. */
+.kr-dot {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--c);
+  box-shadow: 0 0 14px 1px color-mix(in srgb, var(--c) 75%, transparent);
+  opacity: 0;
+  transform: translate(var(--tx), var(--ty)) scale(0.5);
+  animation: kr-converge 1.45s cubic-bezier(0.35, 0, 0.1, 1) var(--d) forwards;
+}
+
+@keyframes kr-converge {
+  0% {
+    opacity: 0;
+    transform: translate(var(--tx), var(--ty)) scale(0.4);
+  }
+  18% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 1;
+    transform: translate(
+        calc(var(--tx) * 0.08),
+        calc(var(--ty) * 0.08)
+      )
+      scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.2);
+  }
+}
+
+/* The luminous core the currents merge into. */
+.kr-core {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow:
+    0 0 0 0 color-mix(in srgb, var(--accent) 60%, transparent),
+    0 0 24px 4px color-mix(in srgb, var(--accent) 65%, transparent);
+  opacity: 0;
+  transform: scale(0.2);
+  animation: kr-core 2.1s cubic-bezier(0.22, 0.68, 0.18, 1) forwards;
+}
+
+@keyframes kr-core {
+  0% { opacity: 0; transform: scale(0.2); }
+  /* The arrival flash as the currents land. */
+  58% {
+    opacity: 1;
+    transform: scale(1.9);
+    box-shadow:
+      0 0 0 10px color-mix(in srgb, var(--accent) 22%, transparent),
+      0 0 60px 16px color-mix(in srgb, var(--accent) 60%, transparent);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.6);
+    box-shadow:
+      0 0 0 22px color-mix(in srgb, var(--accent) 0%, transparent),
+      0 0 30px 6px color-mix(in srgb, var(--accent) 0%, transparent);
+  }
+}
+
+/* The mark emerges from the core once the confluence completes. */
+.kr-mark {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.kr-kanji {
+  font-size: clamp(20px, 4vw, 26px);
+  font-weight: 700;
+  letter-spacing: 0.42em;
+  /* optical centering against the letter-spacing */
+  padding-left: 0.42em;
+  color: var(--muted);
+  opacity: 0;
+  transform: translateY(6px);
+  animation: kr-rise 0.9s cubic-bezier(0.22, 0.68, 0.18, 1) 0.95s forwards;
+}
+
+.kr-word {
+  font-size: clamp(40px, 9vw, 66px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--foreground);
+  opacity: 0;
+  transform: translateY(10px) scale(0.97);
+  animation: kr-word 1s cubic-bezier(0.18, 0.72, 0.16, 1) 1.05s forwards;
+}
+
+.kr-u {
+  color: var(--accent);
+}
+
+@keyframes kr-rise {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes kr-word {
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* A hairline that fills to signal completion. */
+.kr-meter {
+  position: relative;
+  width: 132px;
+  height: 2px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--foreground) 9%, transparent);
+  overflow: hidden;
+  opacity: 0;
+  animation: kr-rise 0.6s ease 1.2s forwards;
+}
+
+.kr-meter__fill {
+  position: absolute;
+  inset: 0;
+  transform-origin: left center;
+  transform: scaleX(0);
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--accent) 55%, transparent),
+    var(--accent)
+  );
+  animation: kr-fill 1.15s cubic-bezier(0.4, 0, 0.1, 1) 1.2s forwards;
+}
+
+@keyframes kr-fill {
+  to { transform: scaleX(1); }
+}
+
+/* Reduced motion: keep the confluence — it's the hero moment — but drop the
+   blurred exit so the dismissal is a plain, calm fade rather than a sweep. */
+@media (prefers-reduced-motion: reduce) {
+  .kr-loader.is-exiting {
+    filter: none;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   "Confluence" — the cinematic intro (IntroReveal.tsx).
+   A large swarm of colourful orbs streams inward along curved
+   currents and merges into a luminous core, which blooms and
+   resolves into the 交流 kanji and the Koryuu wordmark. Many → one.
+   ───────────────────────────────────────────────────────────── */
+
+.iv {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  background: var(--background);
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 1;
+  transition:
+    opacity 0.65s cubic-bezier(0.5, 0, 0.2, 1),
+    filter 0.65s cubic-bezier(0.5, 0, 0.2, 1);
+}
+
+.iv.is-exiting {
+  opacity: 0;
+  filter: blur(7px);
+  pointer-events: none;
+}
+
+/* Ambient accent glow, brightening as the sequence builds. */
+.iv__glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    40rem 36rem at 50% 46%,
+    color-mix(in srgb, var(--accent) 18%, transparent),
+    transparent 70%
+  );
+  opacity: 0;
+  animation: iv-glow 5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes iv-glow {
+  0% { opacity: 0; }
+  20% { opacity: 0.45; }
+  /* climax flash as the currents land and the mark resolves */
+  56% { opacity: 1; }
+  100% { opacity: 0.85; }
+}
+
+.iv__stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(92vw, 600px);
+  height: 460px;
+}
+
+/* The field and the mark stack centered in the same spot. */
+.iv__field,
+.iv-mark {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+.iv__field {
+  display: grid;
+  place-items: center;
+}
+
+.iv-u { color: var(--accent); }
+
+/* ── The converging swarm ───────────────────────────────────── */
+.iv-orb {
+  position: absolute;
+  width: var(--sz);
+  height: var(--sz);
+  border-radius: 999px;
+  background: var(--c);
+  box-shadow:
+    0 0 calc(var(--sz) * 2) calc(var(--sz) * 0.25)
+      color-mix(in srgb, var(--c) 75%, transparent);
+  filter: blur(var(--blur, 0));
+  opacity: 0;
+  transform: translate(var(--tx), var(--ty)) scale(0.5);
+  will-change: transform, opacity;
+  animation: iv-flow var(--dur) cubic-bezier(0.45, 0, 0.12, 1) var(--d) forwards;
+}
+
+/* Stream in along a curved current (via the --mx/--my control point),
+   brighten, then dissolve into the core. */
+@keyframes iv-flow {
+  0% { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(0.45); }
+  16% { opacity: var(--o); }
+  72% {
+    opacity: var(--o);
+    transform: translate(var(--mx), var(--my)) scale(1);
+  }
+  100% { opacity: 0; transform: translate(0, 0) scale(0.12); }
+}
+
+/* Faint guide rings — a hint of the platform the currents orbit. */
+.iv-orbit {
+  position: absolute;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 16%, transparent);
+  opacity: 0;
+  animation: iv-orbit-fade 3.2s ease forwards;
+}
+
+.iv-orbit--1 {
+  width: 280px;
+  height: 280px;
+  animation-delay: 0.2s;
+}
+
+.iv-orbit--2 {
+  width: 460px;
+  height: 460px;
+  border-style: dashed;
+  animation-delay: 0.4s;
+}
+
+@keyframes iv-orbit-fade {
+  0% { opacity: 0; transform: scale(0.92) rotate(0deg); }
+  35% { opacity: 0.5; }
+  100% { opacity: 0; transform: scale(1.04) rotate(22deg); }
+}
+
+/* The luminous core the currents merge into. */
+.iv-core {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow:
+    0 0 26px 5px color-mix(in srgb, var(--accent) 65%, transparent),
+    0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent);
+  opacity: 0;
+  transform: scale(0.2);
+  animation: iv-core 2.9s cubic-bezier(0.22, 0.68, 0.18, 1) 0.5s forwards;
+}
+
+@keyframes iv-core {
+  0% { opacity: 0; transform: scale(0.2); }
+  55% { opacity: 1; transform: scale(1.1); }
+  /* the arrival flash as the currents land */
+  74% {
+    opacity: 1;
+    transform: scale(2.6);
+    box-shadow:
+      0 0 70px 22px color-mix(in srgb, var(--accent) 60%, transparent),
+      0 0 0 14px color-mix(in srgb, var(--accent) 18%, transparent);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+    box-shadow:
+      0 0 30px 6px color-mix(in srgb, var(--accent) 0%, transparent),
+      0 0 0 30px color-mix(in srgb, var(--accent) 0%, transparent);
+  }
+}
+
+/* Shockwave rings that ride out from the core on arrival. */
+.iv-core__ring {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 2px solid color-mix(in srgb, var(--accent) 70%, transparent);
+  opacity: 0;
+  transform: scale(0.3);
+  animation: iv-shock 1.25s cubic-bezier(0.22, 0.68, 0.18, 1) 2.2s forwards;
+}
+
+.iv-core__ring--2 { animation-delay: 2.45s; }
+
+@keyframes iv-shock {
+  0% { opacity: 0; transform: scale(0.3); }
+  22% { opacity: 0.85; }
+  100% { opacity: 0; transform: scale(11); border-width: 0.5px; }
+}
+
+/* ── The resolved mark ──────────────────────────────────────── */
+.iv-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  height: max-content;
+}
+
+.iv-mark__kanji {
+  font-size: clamp(20px, 4vw, 26px);
+  font-weight: 700;
+  letter-spacing: 0.42em;
+  padding-left: 0.42em;
+  color: var(--muted);
+  opacity: 0;
+  transform: translateY(6px);
+  animation: iv-rise 0.9s cubic-bezier(0.22, 0.68, 0.18, 1) 2.7s forwards;
+}
+
+.iv-mark__word {
+  font-size: clamp(42px, 9.5vw, 70px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--foreground);
+  opacity: 0;
+  transform: translateY(10px) scale(0.96);
+  animation: iv-word 1s cubic-bezier(0.18, 0.72, 0.16, 1) 2.9s forwards;
+}
+
+@keyframes iv-rise { to { opacity: 1; transform: translateY(0); } }
+@keyframes iv-word { to { opacity: 1; transform: translateY(0) scale(1); } }
+
+.iv-mark__meter {
+  position: relative;
+  width: 140px;
+  height: 2px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--foreground) 9%, transparent);
+  overflow: hidden;
+  opacity: 0;
+  animation: iv-rise 0.6s ease 3.05s forwards;
+}
+
+.iv-mark__fill {
+  position: absolute;
+  inset: 0;
+  transform-origin: left center;
+  transform: scaleX(0);
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--accent) 55%, transparent),
+    var(--accent)
+  );
+  animation: iv-fill 1s cubic-bezier(0.4, 0, 0.1, 1) 3.05s forwards;
+}
+
+@keyframes iv-fill { to { transform: scaleX(1); } }
+
+/* ── Skip affordance ────────────────────────────────────────── */
+@keyframes iv-fade-in { to { opacity: 1; } }
+
+.iv__skip {
+  position: absolute;
+  bottom: 1.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  opacity: 0;
+  animation: iv-fade-in 0.5s ease 1.2s forwards;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.iv__skip:hover {
+  color: var(--foreground);
+  border-color: var(--accent);
+}
+
+/* Dev-only audio-evaluation picker (never rendered in production). */
+.iv__audio {
+  position: fixed;
+  bottom: 1.4rem;
+  left: 1.4rem;
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: color-mix(in srgb, var(--surface) 78%, transparent);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 28px -12px color-mix(in srgb, var(--accent) 70%, transparent);
+}
+
+.iv__audio-label {
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--muted);
+  padding-left: 0.25rem;
+}
+
+.iv__audio-btn {
+  padding: 0.38rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.1s ease;
+}
+
+.iv__audio-btn:hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.iv__audio-btn:active {
+  transform: scale(0.95);
+}
+
+/* Reduced motion: keep the full sequence — it's the brand's hero moment — but
+   calm it by dropping the blurred curtain exit. */
+@media (prefers-reduced-motion: reduce) {
+  .iv.is-exiting { filter: none; }
+}

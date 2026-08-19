@@ -1,6 +1,6 @@
 # Project Status
 
-Last reviewed: 2026-07-26
+Last reviewed: 2026-08-20
 
 ## State
 
@@ -10,7 +10,9 @@ Last reviewed: 2026-07-26
 - Framework: Next.js 16, React 19, Tailwind CSS 4
 - Deployment target: Cloudflare Pages
 - Next.js and eslint-config-next were updated to 16.2.11.
-- No deploy has been performed.
+- A separate private Vercel static deployment is connected to GitHub and updates
+  on every `main` push. It is only a Studio review surface; the future public
+  Cloudflare Pages release remains a separate decision.
 
 ## Selected source
 
@@ -47,6 +49,8 @@ also differ.
 - `.env.local.example` contains placeholders only.
 - Public-source secrets scan passed.
 - ESLint and the production build passed on Windows.
+- Direct visits to the private review deployment are rejected. Studio exchanges
+  a 30-second signed launch ticket for a secure 12-hour browser session.
 
 ## Follow-up
 

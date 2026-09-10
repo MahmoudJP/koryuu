@@ -4,8 +4,8 @@ import { Footer } from "@/components/Footer";
 import { AppGrid } from "@/components/AppGrid";
 
 export const metadata: Metadata = {
-  title: "Apps",
-  description: "Every app and tool built under the Koryuu umbrella — search and browse the full catalogue.",
+  title: "Product directory",
+  description: "Explore every software product, utility, and experiment in Koryuu.",
 };
 
 export default function AppsPage() {
@@ -15,14 +15,14 @@ export default function AppsPage() {
       <main className="mx-auto max-w-6xl px-5 pt-16 sm:px-8">
         <header className="reveal mb-10">
           <span className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
-            The catalogue
+            Product directory
           </span>
           <h1 className="display mt-2 text-4xl font-bold text-foreground sm:text-5xl">
-            All apps
+            Everything Koryuu is building.
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-muted">
-            A living directory. Search by name or idea, or filter by category. Click any
-            app to open its own page.
+            Native utilities, learning systems, and cross-platform tools — with real
+            interface screenshots, product context, and implementation details.
           </p>
         </header>
 

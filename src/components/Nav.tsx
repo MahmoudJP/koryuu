@@ -6,8 +6,8 @@ import { LogoLink } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
-  { href: "/apps/", label: "Apps", match: (p: string) => p.startsWith("/apps") },
-  { href: "/about/", label: "About", match: (p: string) => p.startsWith("/about") },
+  { href: "/", label: "Products", match: (p: string) => p === "/" || p.startsWith("/apps") },
+  { href: "/about/", label: "Koryuu", match: (p: string) => p.startsWith("/about") },
 ];
 
 export function Nav() {
@@ -35,6 +35,14 @@ export function Nav() {
                 </Link>
               );
             })}
+            <a
+              href="https://mahmoud.jp"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="hidden rounded-full px-3 py-1.5 text-sm font-medium text-muted transition-colors hover:text-foreground sm:block sm:px-4"
+            >
+              mahmoud.jp ↗
+            </a>
           </div>
           <div className="ml-1 sm:ml-2">
             <ThemeToggle />

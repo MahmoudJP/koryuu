@@ -45,7 +45,11 @@ Every app on the site is generated from one file:
   glyph: "M",                  // shown in the generated icon tile
   // logo: "/apps/my-new-app.png",  // optional: real logo image overrides the glyph
   tagline: "One sharp sentence.",
+  cardSummary: "A function-first line for the compact product card.",
   description: "A paragraph or two for the landing page.",
+  problem: "The concrete problem that made this worth building.",
+  useCases: ["A representative job or situation"],
+  nextStep: "The next honest development milestone.",
   platforms: ["macOS"],
   status: "live",              // live | beta | in-development | internal
   year: 2026,

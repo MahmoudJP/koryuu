@@ -28,16 +28,16 @@ const notoJp = Noto_Sans_JP({
 export const metadata: Metadata = {
   metadataBase: new URL("https://koryuu.com"),
   title: {
-    default: "Koryuu — software at the crossroads of cultures",
+    default: "Koryuu — focused software products",
     template: "%s · Koryuu",
   },
   description:
-    "Koryuu (交流) is a software studio — a home for apps and tools built at the crossroads of cultures. The name is Japanese for exchange, and the trailing “u” is you, on the other side of it.",
-  keywords: ["Koryuu", "交流", "apps", "software", "software studio", "Japan"],
+    "Focused software products, utilities, and experiments for work, learning, macOS, and everyday systems.",
+  keywords: ["Koryuu", "software products", "macOS apps", "learning tools", "Tokyo"],
   openGraph: {
-    title: "Koryuu — software at the crossroads of cultures",
+    title: "Koryuu — focused software products",
     description:
-      "Koryuu (交流) is a software studio — a home for apps and tools built at the crossroads of cultures. The name is Japanese for exchange, and the trailing “u” is you.",
+      "Focused software products, utilities, and experiments for work, learning, macOS, and everyday systems.",
     url: "https://koryuu.com",
     siteName: "Koryuu",
     type: "website",

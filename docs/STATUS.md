@@ -62,9 +62,11 @@ Last reviewed: 2026-09-11
   unified dark-studio product image system. Privacy-safe real interface captures
   remain available inside the relevant product galleries; Switcher uses a
   source-faithful, privacy-safe visualization of its compact native HUD.
+- The refreshed portfolio was deployed to the existing Cloudflare Pages project
+  `koryuu` on 2026-09-11 and is live at `koryuu.com` and `www.koryuu.com`.
 - A separate private Vercel static deployment is connected to GitHub and updates
-  on every `main` push. It is only a Studio review surface; the future public
-  Cloudflare Pages release remains a separate decision.
+  on every `main` push. It remains a Studio review surface rather than the public
+  production host.
 
 ## Selected source
 
@@ -105,12 +107,16 @@ also differ.
   after the product-page, gallery, card, CTA, and imagery update.
 - The local browser review passed for the product grid, SuperNotch product page,
   Switcher imagery, lightbox controls, keyboard navigation, and console errors.
+- Post-deployment checks returned HTTP 200 from `koryuu.com`, `www.koryuu.com`,
+  and the immutable Cloudflare deployment URL. The public HTML contains the
+  unchanged intro, includes SuperNotch, and contains no SHAMS catalogue entry.
 - Direct visits to the private review deployment are rejected. Studio exchanges
   a 30-second signed launch ticket for a secure 12-hour browser session.
 
 ## Follow-up
 
-- Review branding, contact details, and legal pages before deployment.
+- Continue reviewing branding, contact details, and legal copy as the product
+  catalogue evolves.
 - Decide whether to merge any features from the test copy.
 - Dependency audit still reports upstream Next.js/tooling advisories; do not use
   `npm audit fix --force`.

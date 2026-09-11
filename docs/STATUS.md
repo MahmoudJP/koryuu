@@ -20,8 +20,13 @@ Last reviewed: 2026-09-11
 - Product cards now use a compact, consistent three-column desktop layout with
   equal visual treatment, function-first summaries, technology, project status,
   and an explicit platform count.
+- DTP Master, JLPT Master, and CloudOps Associate are now identified as
+  cross-platform products across their cards and product pages, with their
+  planned Web, Windows, macOS, and Linux availability shown where applicable.
 - The long Koryuu name explanation was removed, while the existing cinematic
   Confluence opening effect remains mounted in the root layout and unchanged.
+- The experimental intro-audio system and its local evaluation controls were
+  removed completely. The visual Confluence opening remains silent and intact.
 - SHAMS was removed from the public project catalogue.
 - Real, privacy-safe product screenshots were added for DTP Master, JLPT
   Master, SuperNotch, MyLife, and CloudOps Associate.
@@ -62,6 +67,11 @@ Last reviewed: 2026-09-11
   unified dark-studio product image system. Privacy-safe real interface captures
   remain available inside the relevant product galleries; Switcher uses a
   source-faithful, privacy-safe visualization of its compact native HUD.
+- DTP Master, JLPT Master, and CloudOps Associate now use platform-neutral card
+  artwork: each interface floats directly in its own calm studio environment,
+  with laptop shells, keyboards, bezels, and operating-system branding removed.
+  SuperNotch keeps its MacBook presentation because the hardware notch is part
+  of the product itself.
 - The refreshed portfolio was deployed to the existing Cloudflare Pages project
   `koryuu` on 2026-09-11 and is live at `koryuu.com` and `www.koryuu.com`.
 - A separate private Vercel static deployment is connected to GitHub and updates

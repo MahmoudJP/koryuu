@@ -644,53 +644,6 @@ html.kr-loading body {
   border-color: var(--accent);
 }
 
-/* Dev-only audio-evaluation picker (never rendered in production). */
-.iv__audio {
-  position: fixed;
-  bottom: 1.4rem;
-  left: 1.4rem;
-  z-index: 101;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.7rem;
-  border-radius: 999px;
-  border: 1px solid var(--border-strong);
-  background: color-mix(in srgb, var(--surface) 78%, transparent);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 8px 28px -12px color-mix(in srgb, var(--accent) 70%, transparent);
-}
-
-.iv__audio-label {
-  font-family: var(--font-sans);
-  font-size: 0.74rem;
-  font-weight: 500;
-  color: var(--muted);
-  padding-left: 0.25rem;
-}
-
-.iv__audio-btn {
-  padding: 0.38rem 0.8rem;
-  border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
-  background: color-mix(in srgb, var(--accent) 12%, transparent);
-  color: var(--foreground);
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: border-color 0.2s ease, background 0.2s ease, transform 0.1s ease;
-}
-
-.iv__audio-btn:hover {
-  border-color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 22%, transparent);
-}
-
-.iv__audio-btn:active {
-  transform: scale(0.95);
-}
-
 /* Reduced motion: keep the full sequence — it's the brand's hero moment — but
    calm it by dropping the blurred curtain exit. */
 @media (prefers-reduced-motion: reduce) {

@@ -76,7 +76,8 @@ export function AppCard({ app }: { app: App }) {
       <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-border pt-4 text-sm">
         <StatusDot status={app.status} />
         <span className="font-medium text-muted" title={app.platforms.join(" · ")}>
-          {app.platforms.length} {app.platforms.length === 1 ? "platform" : "platforms"}
+          {app.platformLabel ??
+            `${app.platforms.length} ${app.platforms.length === 1 ? "platform" : "platforms"}`}
         </span>
       </div>
     </div>

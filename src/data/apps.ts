@@ -41,6 +41,8 @@ export interface App {
   /** Honest next milestone for an in-progress product. */
   nextStep: string;
   platforms: Platform[];
+  /** Optional concise availability copy for cards and page headers. */
+  platformLabel?: string;
   status: Status;
   year: number;
   tech?: string[];
@@ -110,7 +112,8 @@ export const apps: App[] = [
       "Keep quotes, invoices, and production work in one studio workflow",
     ],
     nextStep: "Expand production checks and package a stable cross-platform beta.",
-    platforms: ["macOS", "Windows"],
+    platforms: ["Windows", "macOS", "Linux"],
+    platformLabel: "Cross-platform",
     status: "in-development",
     year: 2025,
     tech: ["Tauri", "React", "Rust", "Python"],
@@ -123,7 +126,7 @@ export const apps: App[] = [
     ],
     story:
       "Born from a decade of doing trilingual DTP work by hand. Every feature replaces a checklist that used to live on paper.",
-    screenshot: "/apps/screenshots/showcase/dtp-master.png",
+    screenshot: "/apps/screenshots/showcase/dtp-master-neutral.png",
     screenshotCaption:
       "A single production workspace for PDF comparison, inspection, cleanup, and repeatable DTP utilities.",
     facts: [
@@ -162,7 +165,8 @@ export const apps: App[] = [
       "Switch explanations between Arabic and English when a concept needs another angle",
     ],
     nextStep: "Complete the N5–N1 content pass and refine adaptive study planning.",
-    platforms: ["Web", "macOS"],
+    platforms: ["Web", "Windows", "macOS", "Linux"],
+    platformLabel: "Cross-platform",
     status: "in-development",
     year: 2025,
     tech: ["React", "TypeScript", "Vite"],
@@ -173,7 +177,7 @@ export const apps: App[] = [
       "Daily stats, streaks, weak-word tracking",
       "English / Arabic translation toggle",
     ],
-    screenshot: "/apps/screenshots/showcase/jlpt-master.png",
+    screenshot: "/apps/screenshots/showcase/jlpt-master-neutral.png",
     screenshotCaption:
       "The study coach starts from a clean local profile and prioritizes the next useful review or lesson.",
     facts: [
@@ -380,7 +384,8 @@ export const apps: App[] = [
     ],
     nextStep:
       "Finish blueprint verification and expand feedback around hands-on labs and mock exams.",
-    platforms: ["Web"],
+    platforms: ["Web", "Windows", "macOS", "Linux"],
+    platformLabel: "Cross-platform",
     status: "in-development",
     year: 2025,
     tech: ["React", "TypeScript", "Vite", "Tauri"],
@@ -391,7 +396,7 @@ export const apps: App[] = [
       "Adaptive practice, confidence tracking, and spaced-repetition review",
       "Local-first progress with encrypted export and optional sync",
     ],
-    screenshot: "/apps/screenshots/showcase/cloudops-associate.png",
+    screenshot: "/apps/screenshots/showcase/cloudops-associate-neutral.png",
     screenshotCaption:
       "A training dashboard used inside the learning material to make monitoring and incident-response concepts concrete.",
     facts: [

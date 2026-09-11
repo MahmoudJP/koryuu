@@ -97,7 +97,9 @@ export default async function AppLandingPage({ params }: PageProps) {
 
             <div className="reveal reveal-2 mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
               <StatusDot status={app.status} />
-              <span className="font-medium text-muted">{app.platforms.join(" · ")}</span>
+              <span className="font-medium text-muted">
+                {app.platformLabel ?? app.platforms.join(" · ")}
+              </span>
               <span className="font-medium text-muted">Started {app.year}</span>
             </div>
           </div>

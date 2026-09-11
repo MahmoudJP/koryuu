@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
-import type { IntroStyle } from "./introAudio";
+import { useEffect, useMemo, useState } from "react";
 
 /**
  * "Confluence" — Koryuu's cinematic intro.
@@ -52,15 +51,9 @@ function makeRng(seed: number) {
   };
 }
 
-// Audio is a dev-only evaluation aid — gated so it never runs in production.
-const AUDIO_DEV_ONLY = process.env.NODE_ENV === "development";
-
 export function IntroReveal() {
   const [exiting, setExiting] = useState(false);
   const [done, setDone] = useState(false);
-  // Bumped to replay the intro from the top (dev audio-evaluation control).
-  const [runId, setRunId] = useState(0);
-  const audioRef = useRef<AudioContext | null>(null);
 
   const orbs = useMemo(() => {
     const rng = makeRng(0x6b6f7279); // "kory"
@@ -97,64 +90,13 @@ export function IntroReveal() {
     });
   }, []);
 
-  const stopAudio = () => {
-    audioRef.current?.close().catch(() => {});
-    audioRef.current = null;
-  };
-
-  const playAudio = (style: IntroStyle) => {
-    if (!AUDIO_DEV_ONLY) return;
-    stopAudio();
-    import("./introAudio")
-      .then((m) => {
-        audioRef.current = m.playIntroAudio(style);
-      })
-      .catch(() => {});
-  };
-
   const skip = () => {
     setExiting(true);
-    stopAudio();
     window.setTimeout(() => {
       document.documentElement.classList.remove("kr-loading");
       setDone(true);
     }, 650);
   };
-
-  // Dev-only: restart the animation and the chosen audio style together, synced.
-  const runWithStyle = (style: IntroStyle) => {
-    stopAudio();
-    document.documentElement.classList.add("kr-loading");
-    setExiting(false);
-    setDone(false);
-    setRunId((r) => r + 1);
-    playAudio(style);
-  };
-
-  const AudioPicker = AUDIO_DEV_ONLY ? (
-    <div className="iv__audio" onClick={(e) => e.stopPropagation()}>
-      <span className="iv__audio-label">▶ Play with sound:</span>
-      {(
-        [
-          ["pulse", "Pulse · Classic"],
-          ["pulse-warm", "Pulse · Warm"],
-          ["pulse-neon", "Pulse · Neon"],
-          ["voice", "Voice · Warm (halal)"],
-          ["voice-bright", "Voice · Bright (halal)"],
-          ["voice-deep", "Voice · Deep (halal)"],
-        ] as [IntroStyle, string][]
-      ).map(([s, label]) => (
-        <button
-          key={s}
-          className="iv__audio-btn"
-          onClick={() => runWithStyle(s)}
-          type="button"
-        >
-          {label}
-        </button>
-      ))}
-    </div>
-  ) : null;
 
   useEffect(() => {
     const root = document.documentElement;
@@ -173,22 +115,9 @@ export function IntroReveal() {
       window.clearTimeout(t2);
       root.classList.remove("kr-loading");
     };
-  }, [runId]);
-
-  // Stop any audio when the component unmounts.
-  useEffect(() => stopAudio, []);
-
-  // Dev-only: expose the offline render so the audio can be measured/auditioned.
-  useEffect(() => {
-    if (!AUDIO_DEV_ONLY) return;
-    import("./introAudio").then((m) => {
-      (window as unknown as Record<string, unknown>).__koryuuIntroAudio = m;
-    });
   }, []);
 
-  // After the intro finishes, keep the dev audio picker around so the styles
-  // can be auditioned in sync. In production this renders nothing.
-  if (done) return AudioPicker;
+  if (done) return null;
 
   return (
     <div
@@ -199,9 +128,9 @@ export function IntroReveal() {
       onClick={skip}
     >
       {/* Ambient glow that intensifies as the currents converge. */}
-      <div className="iv__glow" key={`glow-${runId}`} aria-hidden />
+      <div className="iv__glow" aria-hidden />
 
-      <div className="iv__stage" key={`stage-${runId}`} aria-hidden>
+      <div className="iv__stage" aria-hidden>
         {/* The converging swarm. */}
         <div className="iv__field">
           {orbs.map((o, i) => (
@@ -250,8 +179,6 @@ export function IntroReveal() {
       <button className="iv__skip" onClick={skip} type="button">
         Skip intro
       </button>
-
-      {AudioPicker}
     </div>
   );
 }

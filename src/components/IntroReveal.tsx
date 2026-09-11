@@ -5,11 +5,11 @@ import { useEffect, useMemo, useState } from "react";
 /**
  * "Confluence" — Koryuu's cinematic intro.
  *
- * 交流 (kōryū) means *exchange / flow*. Koryuu is one platform that many apps,
- * tools and services flow into. So a large swarm of colourful orbs — each a
+ * Koryuu is one platform that many apps, tools and services flow into. So a
+ * large swarm of colourful orbs — each a
  * point of its own hue, near and far for depth — streams inward along curved
  * currents and merges into a single luminous core, which blooms and resolves
- * into the 交流 kanji and the Koryuu wordmark. Many → one.
+ * into the Koryuu wordmark. Many → one.
  *
  * The orb field is generated procedurally (not from the app list), so the
  * "many things converging" idea scales whether there are 8 apps or 800.
@@ -166,7 +166,6 @@ export function IntroReveal() {
 
         {/* The mark that emerges from the confluence. */}
         <div className="iv-mark">
-          <span className="iv-mark__kanji jp">交流</span>
           <span className="iv-mark__word display">
             Koryu<span className="iv-u">u</span>
           </span>

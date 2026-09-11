@@ -32,39 +32,39 @@ export function AppGrid({ apps = allApps }: { apps?: App[] }) {
 
   return (
     <div>
-      <div className="flex flex-col gap-5 border-b border-border pb-7 lg:flex-row lg:items-center lg:justify-between">
-      <div className="relative w-full lg:max-w-md">
-        <svg
-          className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-muted"
-          width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden
-        >
-          <circle cx="11" cy="11" r="7" />
-          <path d="m21 21-4.3-4.3" />
-        </svg>
-        <input
-          type="search"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search products, tools, platforms…"
-          aria-label="Search products"
-          className="w-full rounded-full border border-border bg-surface py-3 pl-11 pr-4 text-base text-foreground outline-none transition-colors placeholder:text-muted focus:border-accent focus:ring-4 focus:ring-[var(--ring)]"
-        />
-      </div>
-
-      <div className="no-scrollbar flex gap-2 overflow-x-auto pb-1 lg:justify-end">
-        <Pill active={category === null} onClick={() => setCategory(null)}>
-          All <span className="opacity-60">{apps.length}</span>
-        </Pill>
-        {categories.map((c) => (
-          <Pill
-            key={c.name}
-            active={category === c.name}
-            onClick={() => setCategory(category === c.name ? null : c.name)}
+      <div className="grid gap-5 border-b border-border pb-7 lg:grid-cols-[minmax(16rem,22rem)_minmax(0,1fr)] lg:items-center">
+        <div className="relative w-full">
+          <svg
+            className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-muted"
+            width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden
           >
-            {c.name} <span className="opacity-60">{c.count}</span>
+            <circle cx="11" cy="11" r="7" />
+            <path d="m21 21-4.3-4.3" />
+          </svg>
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search products, tools, platforms…"
+            aria-label="Search products"
+            className="w-full rounded-full border border-border bg-surface py-3 pl-11 pr-4 text-base text-foreground outline-none transition-colors placeholder:text-muted focus:border-accent focus:ring-4 focus:ring-[var(--ring)]"
+          />
+        </div>
+
+        <div className="no-scrollbar -mx-1 flex min-w-0 gap-2 overflow-x-auto px-1 pb-1">
+          <Pill active={category === null} onClick={() => setCategory(null)}>
+            All <span className="opacity-60">{apps.length}</span>
           </Pill>
-        ))}
-      </div>
+          {categories.map((c) => (
+            <Pill
+              key={c.name}
+              active={category === c.name}
+              onClick={() => setCategory(category === c.name ? null : c.name)}
+            >
+              {c.name} <span className="opacity-60">{c.count}</span>
+            </Pill>
+          ))}
+        </div>
       </div>
 
       {filtered.length === 0 ? (

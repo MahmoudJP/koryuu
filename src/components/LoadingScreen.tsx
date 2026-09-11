@@ -6,10 +6,10 @@ import { apps } from "@/data/apps";
 /**
  * "Confluence" — Koryuu's intro loading screen.
  *
- * The site is a home for many apps, and 交流 (kōryū) means *exchange / flow*.
- * So the many projects — each a point in its own accent color — stream inward
+ * The site is a home for many apps. The projects — each a point in its own
+ * accent color — stream inward
  * along curved currents and merge into a single luminous core, which resolves
- * into the 交流 kanji and the Koryuu wordmark. Many → one → you.
+ * into the Koryuu wordmark. Many → one.
  *
  * It lives in the root layout, so it plays once on a real page load and stays
  * out of the way during client-side navigation (the layout never remounts).
@@ -96,7 +96,6 @@ export function LoadingScreen() {
 
         {/* The mark that emerges from the confluence. */}
         <div className="kr-mark">
-          <span className="kr-kanji jp">交流</span>
           <span className="kr-word display">
             Koryu<span className="kr-u">u</span>
           </span>

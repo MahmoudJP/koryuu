@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8">
         <div className="flex flex-col items-start justify-between gap-10 sm:flex-row sm:items-center">
           <div>
-            <Wordmark showKanji className="text-xl" />
+            <Wordmark className="text-xl" />
             <p className="mt-3 max-w-sm text-base leading-relaxed text-muted">
               Focused software products, utilities, and experiments built to solve
               real problems.

@@ -35,7 +35,7 @@ export default async function AppLandingPage({ params }: PageProps) {
   );
   const more = [...pool.slice(start), ...pool.slice(0, start)].slice(0, 3);
   const primaryAction = app.href
-    ? { label: "Open product ↗", href: app.href, external: true }
+    ? { label: app.primaryActionLabel ?? "Open product ↗", href: app.href, external: true }
     : app.screenshot
       ? { label: "Explore the interface ↓", href: "#interface", external: false }
       : { label: "How it works ↓", href: "#overview", external: false };
@@ -90,7 +90,7 @@ export default async function AppLandingPage({ params }: PageProps) {
                   href="#project-status"
                   className="rounded-full border border-border-strong bg-surface/70 px-5 py-2.5 text-sm font-semibold text-foreground transition-all hover:-translate-y-0.5 hover:bg-surface"
                 >
-                  Development status ↓
+                  Product status ↓
                 </a>
               </div>
             </div>

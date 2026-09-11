@@ -20,11 +20,42 @@ Last reviewed: 2026-09-11
 - Product cards now use a compact, consistent three-column desktop layout with
   equal visual treatment, function-first summaries, technology, project status,
   and an explicit platform count.
+- Neon Coil is now part of the public catalogue as a complete playable Web
+  game. Its product page explains the three circuits, five named stages,
+  progression systems, keyboard and touch controls, privacy model, and links
+  to the public source.
+- A self-contained copy of Neon Coil is hosted under
+  `/play/neon-coil/index.html`, so visitors can play without leaving Koryuu.
+  Background music was removed from this copy; optional game-feedback sounds
+  remain under the player's control.
+- Neon Coil uses a platform-neutral arcade hero built from a privacy-safe
+  local capture of the real interface, with no device or operating-system frame.
+- The game start screen now presents its three modes and five-stage progression
+  clearly before a run. Classic and Zen wrap through arena edges; Rush uses hard
+  edges. Toroidal rendering now draws a continuous snake across horizontal and
+  vertical boundaries instead of streaking across the board.
+- Gameplay fixes cover safe tail-cell movement, shield resets between runs,
+  shielded wall re-entry, stable per-run best-score detection, and clean reset
+  state for timed content effects.
+- A full stability pass now delays arena-block collisions until each block is
+  fully visible, keeps new blocks a safe wrap-aware distance from the player,
+  caps stacked speed boosts, eases score-driven speed changes, and cancels
+  stale game-over overlays when a run restarts quickly.
+- End-of-run screens now explain whether the player hit a wall, an armed block,
+  or their own trail. Shield protection safely resolves all three collision
+  types, and persistent shield status remains visible until it is consumed.
+- `npm run test:game` exercises horizontal and vertical wrapping, Rush walls,
+  tail-cell movement, shielded wall/self/obstacle collisions, obstacle arming,
+  restart timing, corrupt local scores, and stacked-speed limits.
 - DTP Master, JLPT Master, and CloudOps Associate are now identified as
   cross-platform products across their cards and product pages, with their
   planned Web, Windows, macOS, and Linux availability shown where applicable.
 - The long Koryuu name explanation was removed, while the existing cinematic
   Confluence opening effect remains mounted in the root layout and unchanged.
+- The former Japanese lockup was removed from the intro, header, footer, and
+  loading surfaces without removing the cinematic opening animation.
+- The catalogue toolbar now reserves its own desktop columns for search and
+  filters, so the leading All filter is fully visible at short desktop heights.
 - The experimental intro-audio system and its local evaluation controls were
   removed completely. The visual Confluence opening remains silent and intact.
 - SHAMS was removed from the public project catalogue.

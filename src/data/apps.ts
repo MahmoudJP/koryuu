@@ -77,6 +77,8 @@ export interface App {
   // ── Links ─────────────────────────────────────────────────
   /** Primary external destination (download, live site, repo). */
   href?: string;
+  /** Optional copy for the primary product action. */
+  primaryActionLabel?: string;
   /** Extra links shown on the landing page */
   links?: AppLink[];
   /** If true, clicking the card goes straight to `href` (no landing page). */
@@ -194,6 +196,52 @@ export const apps: App[] = [
           "The real dashboard surfaces the next useful study action while keeping review queues and progress visible.",
       },
     ],
+  },
+  {
+    slug: "neon-coil",
+    name: "Neon Coil",
+    category: "Game",
+    accent: "#35e6bd",
+    glyph: "N",
+    tagline: "Snake, rebuilt for speed, strategy, and every screen.",
+    cardSummary: "Turns classic Snake into three circuits with combos, powers, and adaptive arenas.",
+    description:
+      "Neon Coil is a dependency-free browser game that takes the instantly familiar rules of Snake and builds a faster, more expressive arcade system around them. Three distinct runs change the pace, while named levels, combos, evolving hazards, special food, and temporary powers keep every session moving.",
+    problem:
+      "Classic Snake is easy to understand, but most versions become repetitive after the first minute and feel awkward on touch screens. Neon Coil keeps the clean one-more-run loop while adding meaningful choices, responsive controls, and clear feedback without turning it into a complicated game.",
+    useCases: [
+      "Play a focused Classic Circuit run and chase a cleaner high score",
+      "Switch to Rush Protocol for a short, high-pressure session",
+      "Use Zen Flow for a calmer run with room to learn the systems",
+      "Play with a keyboard, swipe gestures, or on-screen touch controls",
+    ],
+    nextStep:
+      "Keep the finished core stable and add future circuits only when they create a meaningfully different way to play.",
+    platforms: ["Web"],
+    platformLabel: "Play in any modern browser",
+    status: "live",
+    year: 2026,
+    tech: ["JavaScript", "Canvas", "CSS"],
+    features: [
+      "Classic, Rush, and Zen circuits with different pacing and rules",
+      "Combos, evolving levels, arena hazards, special food, and temporary powers",
+      "Keyboard, swipe, and on-screen touch controls",
+      "Accessible live feedback and reduced-motion support",
+      "Local-only scores and preferences with no account required",
+    ],
+    story:
+      "A tiny browser classic rebuilt like a finished arcade product: quick to enter, easy to read, and deep enough to make the next run feel different.",
+    screenshot: "/apps/screenshots/showcase/neon-coil.png",
+    screenshotCaption:
+      "A platform-neutral view of Neon Coil's arcade board, named levels, and live run feedback.",
+    facts: [
+      { label: "Modes", value: "Classic · Rush · Zen" },
+      { label: "Controls", value: "Keyboard and touch" },
+      { label: "Privacy", value: "Scores stay in your browser" },
+    ],
+    href: "/play/neon-coil/index.html",
+    primaryActionLabel: "Play Neon Coil ↗",
+    links: [{ label: "Source on GitHub", href: "https://github.com/MahmoudJP/snake" }],
   },
   {
     slug: "supernotch",

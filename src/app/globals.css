@@ -154,7 +154,7 @@ body.ready .reveal-4 {
 /* ─────────────────────────────────────────────────────────────
    "Confluence" — the intro loading screen.
    Many app-colored currents flow inward and merge into one core,
-   which resolves into the 交流 kanji and the Koryuu wordmark.
+   which resolves into the Koryuu wordmark.
    ───────────────────────────────────────────────────────────── */
 
 /* Lock scroll only while the loader is on screen. */
@@ -375,7 +375,7 @@ html.kr-loading body {
    "Confluence" — the cinematic intro (IntroReveal.tsx).
    A large swarm of colourful orbs streams inward along curved
    currents and merges into a luminous core, which blooms and
-   resolves into the 交流 kanji and the Koryuu wordmark. Many → one.
+   resolves into the Koryuu wordmark. Many → one.
    ───────────────────────────────────────────────────────────── */
 
 .iv {
